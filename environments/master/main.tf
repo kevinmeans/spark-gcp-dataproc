@@ -101,7 +101,7 @@ resource "google_dataproc_cluster" "mydataproc" {
     # You can define multiple initialization_action blocks
     initialization_action {
       script      = "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"
-      timeout_sec = 500
+      timeout_sec = 10000
     }
   }
 }
