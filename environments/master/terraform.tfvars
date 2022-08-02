@@ -14,8 +14,8 @@ region = "us-west1"
 
 # replace with n1-standard-1 if you only want to test
 machine_types = {
-  "master" = "n1-standard-1"
-  "worker" = "n1-standard-1"
+  "master" = "n1-standard-2"
+  "worker" = "n1-standard-2"
 }
 
 cidrs = [ "10.0.0.0/16", "10.1.0.0/16" ]
