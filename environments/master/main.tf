@@ -134,3 +134,15 @@ resource "google_compute_firewall" "allow_ssh" {
 
  source_ranges = ["0.0.0.0/0"]
 }
+
+resource "google_compute_firewall" "tcp" {
+ name    = "dataproc-tcp-firewall"
+ network = google_compute_network.dataproc_network.name
+
+ allow {
+   protocol = "tcp"
+   ports    = ["80", "8080", "1000-2000", "8088", "9870"]
+ }
+ source_tags = ["web"]
+ source_ranges = ["0.0.0.0/0"]
+}
